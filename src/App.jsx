@@ -12,13 +12,14 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <div className="container mt-4">
+      <div>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/beers" element={<AllBeersPage />} />
           <Route path="/random-beer" element={<RandomBeersPage />} />
           <Route path="/new-beer" element={<AddBeerPage />} />
           <Route path="/beers/:beerId" element={<BeerDetailsPage />} />
+          <Route path='*' element={<h2>404 Page Not Found</h2>}/>
         </Routes>
       </div>
     </div>

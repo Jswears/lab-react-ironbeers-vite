@@ -21,9 +21,16 @@ useEffect(() => {
     beerDetails()
 }, [])
 
+const containerStyle = {
+    display: "flex",
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center'
+}
 
 return beerData ? (
-     <div>
+     <div style={containerStyle}>
+        <h1 className="mt-4">Random Beer!</h1>
         <img src={beerData.image_url} alt={beerData.title} style={{height:"300px"}} />
         <h2>{beerData.name}</h2>
         <p>{beerData.tagline}</p>

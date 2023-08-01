@@ -1,27 +1,16 @@
 import { Link } from "react-router-dom";
+import HomeIcon from '../assets/home-icon.png';
 
+
+const navStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+}
 const Navbar = () => {
     return (  
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container">
-                <Link className="navbar-brand" to="/">My Brewery</Link>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/beers">Beers</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/random-beer">Random Beer</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/new-beer">New Beer</Link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <nav className="navbar navbar-expand-lg navbar-light bg-dark" style={navStyle}>
+                <Link className="navbar-brand" to="/"><img src={HomeIcon} alt="Home Icon"/></Link>
         </nav>
     );
 }
